@@ -16,6 +16,14 @@ return new class extends Migration
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('category_id');
+            $table->DATE('day');
+            $table->TIME('starttime');
+            $table->TIME('endtime');
+            $table->string('title', 50);
+            $table->string('body', 255);
+            $table->boolean('star');
         });
     }
 
