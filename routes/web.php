@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ScheduleControllers;
+use App\Http\Controllers\CommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,4 @@ use App\Http\Controllers\ScheduleControllers;
 
 Route::get('/', function () {return view('welcome');});
 Route::get('/schedules', [ScheduleController::class, 'index']); 
+Route::get('/comments', [commentsController::class, 'index']);   
