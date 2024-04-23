@@ -7,6 +7,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+<x-app-layout>
     <body>
         <h1 class="day">
             {{ $post->day }}
@@ -33,4 +34,5 @@
             <a href="/">戻る</a>
         </div>
     </body>
+</x-app-layout>
 </html>
