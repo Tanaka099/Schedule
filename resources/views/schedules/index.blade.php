@@ -6,3 +6,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+    <body>
+        <h1>Blog Name</h1>
+        <div class='schedules'>
+            <div class='schedule'>
+                <h2 class='title'>Title</h2>
+                <p class='body'>This is a sample body.</p>
+            </div>
+        </div>
+    </body>
+</html>
