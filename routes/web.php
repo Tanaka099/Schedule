@@ -15,6 +15,13 @@ use App\Http\Controllers\ScheduleController;
 |
 */
 Route::get('/', [ScheduleController::class, 'index']);
+
+Route::get('/shedules/create', [ScheduleController::class, 'create']);
+
+Route::get('/schedules/{schedule}', [ScheduleController::class ,'show']);
+
+Route::schedule('/schedules', [ScheduleController::class, 'store']);
+
 Route::get('/', function () {return view('welcome');});
 
 Route::get('/dashboard', function () {return view('dashboard');})->middleware(['auth', 'verified'])->name('dashboard');
