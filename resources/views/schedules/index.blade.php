@@ -6,13 +6,13 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
+<x-app-layout>
     <body>
-        <h1>day</h1>
-        <div class='schedules'>
         @foreach ($schedules as $schedule)
             <div class='schedule'>
+                <h1 class='day'>{{ $schedule->day }}</h1>
                 <h2 class='title'>{{ $schedule->title }}
-                    <a href="/schedules/{{ $schedule->id }}">{{ $schedule->day }}</a>
+                    <a href="/schedules/{{ $schedule->id }}">{{ $schedule->title }}</a>
                 </h2>
                 <p class='starttime'>{{ $schedule->starttime }}</p>
                 <p class='endtime'>{{ $schedule->endtime }}</p>
@@ -21,8 +21,11 @@
             </div>
         @endforeach
         </div>
+        <a href='/schedules/create'>create</a>
         <div class='paginate'>
             {{ $schedules->links() }}
         </div>
+        {{ Auth::user()->name }}
     </body>
+</x-app-layout>
 </html>

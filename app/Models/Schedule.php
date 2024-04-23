@@ -9,12 +9,16 @@ class Schedule extends Model
 {
     use HasFactory;
     
-    public function getByLimit(int $limit_count = 10)
+    public function getPaginateByLimit(int $limit_count = 10)
 {
     return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
 }
-protected $fillable = [
+    protected $fillable = [
+    'day';
     'title',
+    'starttime';
+    'endtime';
     'body',
+    'star';
 ];
 }
