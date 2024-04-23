@@ -9,6 +9,6 @@ class ScheduleController extends Controller
 {
     public function index(Schedule $schedule)
 {
-    return $schedule->get();
+    return view('schedules.index')->with(['schedules' => $schedule->getByLimit()]);
 }
 }
