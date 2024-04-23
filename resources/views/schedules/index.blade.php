@@ -7,12 +7,22 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
-        <h1>Blog Name</h1>
+        <h1>day</h1>
         <div class='schedules'>
+        @foreach ($schedules as $schedule)
             <div class='schedule'>
-                <h2 class='title'>Title</h2>
-                <p class='body'>This is a sample body.</p>
+                <h2 class='title'>{{ $schedule->title }}
+                    <a href="/schedules/{{ $schedule->id }}">{{ $schedule->day }}</a>
+                </h2>
+                <p class='starttime'>{{ $schedule->starttime }}</p>
+                <p class='endtime'>{{ $schedule->endtime }}</p>
+                <p class='body'>{{ $schedule->body }}</p>
+                <p class='star'>{{ $schedule->star }}</p>
             </div>
+        @endforeach
+        </div>
+        <div class='paginate'>
+            {{ $schedules->links() }}
         </div>
     </body>
 </html>
