@@ -14,11 +14,11 @@ class Schedule extends Model
     return $this->orderBy('updated_at', 'DESC')->paginate($limit_count);
 }
     protected $fillable = [
-    'day';
+    'day',
     'title',
-    'starttime';
-    'endtime';
+    'starttime',
+    'endtime',
     'body',
-    'star';
+    'star',
 ];
 }

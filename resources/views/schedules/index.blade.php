@@ -8,6 +8,7 @@
     </head>
 <x-app-layout>
     <body>
+        <p>こんにちは</p>
         @foreach ($schedules as $schedule)
             <div class='schedule'>
                 <h1 class='day'>{{ $schedule->day }}</h1>

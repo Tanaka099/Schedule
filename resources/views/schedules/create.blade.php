@@ -5,8 +5,8 @@
         <title>Blog</title>
     </head>
     <body>
-        <h1>Blog Name</h1>
-        <form action="/posts" method="POST">
+        <h1>Day</h1>
+        <form action="/schedules" method="POST">
             @csrf
             <div class="title">
                 <h2>Title</h2>
