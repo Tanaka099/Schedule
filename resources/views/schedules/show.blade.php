@@ -10,25 +10,25 @@
 <x-app-layout>
     <body>
         <h1 class="day">
-            {{ $post->day }}
+            {{ $schedule->day }}
         </h1>
         <h1 class="title">
-            {{ $post->title }}
+            {{ $schedule->title }}
         </h1>
         <h2 class="starttime">
-            {{ $post->starttime }}
+            {{ $schedule->starttime }}
         </h2>
         <h2 class="endtime">
-            {{ $post->endtime }}
+            {{ $schedule->endtime }}
         </h2>
         <div class="content">
             <div class="content__schedule">
                 <h3>本文</h3>
-                <p>{{ $post->body }}</p>    
+                <p>{{ $schedule->body }}</p>    
             </div>
         </div>
         <h4 class="star">
-            {{ $post->star }}
+            {{ $schedule->star }}
         </h4>
         <div class="footer">
             <a href="/">戻る</a>
