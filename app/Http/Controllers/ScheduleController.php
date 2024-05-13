@@ -11,7 +11,6 @@ class ScheduleController extends Controller
 {
     return view('schedules.index')->with(['schedules' => $schedule->getPaginateByLimit()]);
 }
-
     public function show(Schedule $schedule)
 {
     return view('schedules.show')->with(['schedule' => $schedule]);
@@ -22,10 +21,10 @@ class ScheduleController extends Controller
     return view('schedules.create');
 }
 
-    public function store(Request $request, Post $post)
+    public function store(Schedule $schedule, ScheduleRequest $request)
 {
     $input = $request['schedule'];
-    $post->fill($input)->save();
+    $schedule->fill($input)->save();
     return redirect('/schedules/' . $schedule->id);
 }
 

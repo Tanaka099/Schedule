@@ -8,21 +8,21 @@
     </head>
 <x-app-layout>
     <body>
-        <p>こんにちは</p>
+        <h1>こんにちは</h1>
+        <a href='/schedules/create'>create</a>
         @foreach ($schedules as $schedule)
             <div class='schedule'>
-                <h1 class='day'>{{ $schedule->day }}</h1>
-                <h2 class='title'>{{ $schedule->title }}
-                    <a href="/schedules/{{ $schedule->id }}">{{ $schedule->title }}</a>
-                </h2>
-                <p class='starttime'>{{ $schedule->starttime }}</p>
+                <h2 class='day'>{{ $schedule->day }}</h2>
+                <p class='starttime'>{{ $schedule->starttime }}<p>
                 <p class='endtime'>{{ $schedule->endtime }}</p>
+                <p class='title'>{{ $schedule->title }}
+                    <a href="/schedules/{{ $schedule->id }}">{{ $schedule->title }}</a>
+                </p>
                 <p class='body'>{{ $schedule->body }}</p>
                 <p class='star'>{{ $schedule->star }}</p>
             </div>
         @endforeach
         </div>
-        <a href='/schedules/create'>create</a>
         <div class='paginate'>
             {{ $schedules->links() }}
         </div>
