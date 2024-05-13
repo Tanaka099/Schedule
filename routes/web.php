@@ -15,8 +15,8 @@ use App\Http\Controllers\ScheduleController;
 */
 Route::get('/', function() {return view('schedules.index');});
 Route::get('/', [ScheduleController::class, 'index'])->name('index')->middleware('auth');
-Route::get('/schedules/{schedule}', [ScheduleController::class ,'show']);
 Route::get('/schedules/create', [ScheduleController::class, 'create']);
+Route::get('/schedules/{schedule}', [ScheduleController::class ,'show']);
 Route::post('/schedules', [ScheduleController::class, 'store']);
 Route::get('/', function () {return view('welcome');});
 

@@ -12,19 +12,19 @@
         <h1 class="day">
             {{ $schedule->day }}
         </h1>
-        <h1 class="title">
-            {{ $schedule->title }}
-        </h1>
         <h2 class="starttime">
             {{ $schedule->starttime }}
         </h2>
         <h2 class="endtime">
             {{ $schedule->endtime }}
         </h2>
+        <h2 class="title">
+            {{ $schedule->title }}
+        </h2>
         <div class="content">
             <div class="content__schedule">
                 <h3>本文</h3>
-                <p>{{ $schedule->body }}</p>    
+                <p>{{ $schedule->body }}</p>
             </div>
         </div>
         <h4 class="star">
