@@ -34,11 +34,12 @@
             </div>
             <div class="star">
                 <h2>Star</h2>
-                <input type="boolean" name="schedule[star]">{{ old('schedule.star') }}</input>
+                <input type="checkbox" name="schedule[star]">{{ old('schedule.star') }}</input>
                 <p class="star__error" style="color:red">{{ $errors->first('schedule.star') }}</p>
             </div>
             <input type="submit" value="保存"/>
         </form>
         <div class="back">[<a href="/">back</a>]</div>
     </body>
+
 </html>

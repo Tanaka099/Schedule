@@ -24,12 +24,8 @@ class ScheduleRequest extends FormRequest
     public function rules()
     {
         return [
-            'schedule.day' => 'required|date|',
-            'schedule.starttime'=> 'required|time|',
-            'schedule.endtime'=> 'required|time|',
-            'schedule.title' => 'required|string|max:100',
-            'schedule.body' => 'required|string|max:4000',
-            'schedule.star'=> 'required|boolean|',
+            'schedule.title' => 'required|string|max:50',
+            'schedule.body' => 'required|string|max:255',
         ];
     }
 }
