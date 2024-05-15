@@ -6,7 +6,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
-<x-app-layout>
     <body>
         <h1>こんにちは</h1>
         <a href='/schedules/create'>create</a>
@@ -28,5 +27,4 @@
         </div>
         {{ Auth::user()->name }}
     </body>
-</x-app-layout>
 </html>
